@@ -3,7 +3,11 @@
 **Note:**
 
 I have added the CLI to visualise the checkout system. If it creates issue on your side, then I would suggest you to
-checkout tag [v1.0.0](https://github.com/muhammad-raza/checkout/tree/v1.0.0) so that you get code without CLI.
+checkout stable version of app tagged as [v1.0.0](https://github.com/muhammad-raza/checkout/tree/v1.0.0), so that you get code without CLI.
+
+```shell
+git checkout tags/v1.0.0 
+```
 
 ### Improvements
 
