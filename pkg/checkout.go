@@ -3,10 +3,13 @@ package pkg
 type ICheckout interface {
 	Scan(item string)
 	GetTotalPrice() int
+	GetBasket() Basket
 }
 
+type Basket map[string]*int
+
 type Checkout struct {
-	basket map[string]*int
+	basket Basket
 }
 
 // NewCheckout creates instance of Checkout
@@ -49,4 +52,8 @@ func (c *Checkout) GetTotalPrice() int {
 		total = total + (desc.UnitPrice * quantity)
 	}
 	return total
+}
+
+func (c *Checkout) GetBasket() Basket {
+	return c.basket
 }
